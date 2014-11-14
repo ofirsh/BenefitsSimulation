@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the server logic for a Shiny web application.\n# You can find out more about building applications with Shiny here:\n# \n# http://www.rstudio.com/shiny/\n#\n\nlibrary(shiny)\nsource(\"cutoff.R\")\n\nshinyServer(function(input, output) {\n   \n  benefits <- seq(from = 100, to = 500, length.out = 20)\n  attrition <- cutoff(100,500,input$maxattrition,input$bensaturation,benefits) \n  output$attritionrate <= \"0.5\"\n    \n  output$distPlot <- renderPlot({\n      \n    par(mfrow = c(3,2))\n    \n    \n      \n    \n    plot(attrition ~ benefits)\n    lines(benefits,attrition, col = \"blue\")\n    \n    \n    \n#     # generate bins based on input$bins from ui.R\n#     x    <- faithful[, 2] \n#     bins <- seq(min(x), max(x), length.out = input$bins + 1)\n#     \n#     # draw the histogram with the specified number of bins\n#     hist(x, breaks = bins, col = 'darkgray', border = 'white')\n#     \n  })\n  \n})\n    ",
+    "created" : 1415446213520.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "392273009",
+    "id" : "8B9843A9",
+    "lastKnownWriteTime" : 1415541403,
+    "path" : "~/Documents/Develop/Coursera/Data Products/BenefitsSimulation/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

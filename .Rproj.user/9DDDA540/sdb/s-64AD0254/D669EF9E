@@ -1,0 +1,16 @@
+{
+    "contents" : "\n# This is the user-interface definition of a Shiny web application.\n# You can find out more about building applications with Shiny here:\n# \n# http://www.rstudio.com/shiny/\n#\n\n# install.packages(\"shiny\")\n# library(shiny)\n# runApp()\n\n# deploy to Shiny hosted server\n# https://github.com/rstudio/shinyapps/blob/master/guide/guide.md\n\n# > shinyapps::setAccountInfo(name='benefits', token='xxxx', secret='yyyy')\n# change the xxx and yyy with tokens from the shinyapps account\n# > deployApp()\n\n\nlibrary(shiny)\n\nshinyUI(pageWithSidebar(\n  \n  # Application title\n  headerPanel(\"Benefits Optimization - Simulation\"),\n  \n  \n  # Sidebar with a slider input for number of bins\n  sidebarPanel(\n    \n    h5(\"Parameters\"),\n    \n    sliderInput(\"numberee\",\n                \"Number of Enployees:\",\n                min = 100,\n                max = 1000,\n                value = 200,\n                step = 100),\n    \n    sliderInput(\"benefits\",\n                \"Benefits ($):\",\n                min = 100,\n                max = 500,\n                value = 300,\n                step = 100),\n    \n    sliderInput(\"maxattrition\",\n                \"Maximum Attrition (at minimum Benefits) (%):\",\n                min = 10,\n                max = 40,\n                value = 20,\n                step = 10),\n    \n    sliderInput(\"bensaturation\",\n                \"Benefits Saturation (zero attrition) ($):\",\n                min = 200,\n                max = 500,\n                value = 300,\n                step = 100),\n    \n    sliderInput(\"salary\",\n                \"Salary ($):\",\n                min = 3000,\n                max = 10000,\n                value = 4000,\n                step = 1000)\n   \n  ),\n  \n  # Show a plot of the generated distribution\n  mainPanel(\n    h4(\"Attrition rate:\"),\n    verbatimTextOutput(\"attritionrate\"),\n    plotOutput(\"distPlot\")\n  )\n))\n",
+    "created" : 1415446206374.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1399241708",
+    "id" : "D669EF9E",
+    "lastKnownWriteTime" : 1415541317,
+    "path" : "~/Documents/Develop/Coursera/Data Products/BenefitsSimulation/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

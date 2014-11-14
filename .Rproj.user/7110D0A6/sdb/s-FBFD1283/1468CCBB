@@ -1,0 +1,16 @@
+{
+    "contents" : "source(\"cutoff.R\")\n\nbenefits <- seq(from = 100, to = 500, length.out = 20)\nattrition <- cutoff(100,500,40,300,benefits)\ncurrentAttrition <- cutoff(100,500,40,300,200)",
+    "created" : 1415758909503.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1892143962",
+    "id" : "1468CCBB",
+    "lastKnownWriteTime" : 1415759612,
+    "path" : "C:/Develop/datascience/coursera/Data Products/BenefitsSimulation/BenefitsSimulation/test.R",
+    "project_path" : "test.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

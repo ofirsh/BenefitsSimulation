@@ -1,0 +1,17 @@
+{
+    "contents" : "cutoff <- function(minx, maxx,maxy,cutoffx,x)\n{\n    ysat <- (x>=cutoffx)*0\n    \n    slope <- ( 0 - maxy ) / ( cutoffx - minx )\n    \n    yslope <- (maxy + (x-minx)*slope)*(x<cutoffx)\n    \n    return(ysat + yslope)\n    \n}",
+    "created" : 1415537839122.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4238748444",
+    "id" : "6915B687",
+    "lastKnownWriteTime" : 1415539934,
+    "path" : "~/Documents/Develop/Coursera/Data Products/BenefitsSimulation/cutoff.R",
+    "project_path" : "cutoff.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : true,
+    "type" : "r_source"
+}
