@@ -1,0 +1,16 @@
+{
+    "contents" : "Cost Optimization \n========================================================\nauthor: Ofir Shalev\ndate: 14/11/2014\n\nThe Problem\n========================================================\n\nEffective employee benefits will significantly reduce staff turnover and companies with the most effective benefits are using them to influence the behaviour of their staff and their bottom line, as opposed to simply being competitive\n\nHow can you find this optimal point, balancing between the increasing cost of employee benefits and the need to retain staff and reduce staff turnover?\n\n\n\nThe Tool\n========================================================\n\nThis interactive application simulates the impact of multiple parameters on the overall cost, assuming a simple linear dependency between the attrition rate and the employee benefits:\n\n```{r echo=FALSE}\nsource(\"cutoff.R\")\nbenefits <- round(seq(from = 100, to = 500, length.out = 20))\nattrition <- cutoff(100,500,40,300,benefits)\nplot(attrition ~ benefits, lwd = 3, col = \"cyan\", main = \"Attrition vs. Benefits\", xlab = \"benefits($)\", ylab = \"attrition(%)\")\nlines(benefits,attrition, col = \"blue\")\n```\n\n\nThe Tool in Action\n========================================================\n\n![screenshot](images/SimulatorScreenshot.PNG)\n\nModel Parameters\n========================================================\n\n- Number of Employees\n- Benefits Saturation : Any increase in benefits above the Benefits Saturation point will not have any impact on the attrition rates.\n- Benefits ($)\n- Max Attrition (%)\n- Training Period (months)\n- Salary ($)\n\n\n",
+    "created" : 1415955886808.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1381628142",
+    "id" : "32760C14",
+    "lastKnownWriteTime" : 1415959298,
+    "path" : "C:/Develop/datascience/coursera/Data Products/BenefitsSimulation/BenefitsSimulation/BenefitsSimulation.Rpres",
+    "project_path" : "BenefitsSimulation.Rpres",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_presentation"
+}

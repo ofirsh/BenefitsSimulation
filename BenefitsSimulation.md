@@ -17,13 +17,7 @@ The Tool
 
 This interactive application simulates the impact of multiple parameters on the overall cost, assuming a simple linear dependency between the attrition rate and the employee benefits:
 
-```{r echo=FALSE}
-source("cutoff.R")
-benefits <- round(seq(from = 100, to = 500, length.out = 20))
-attrition <- cutoff(100,500,40,300,benefits)
-plot(attrition ~ benefits, lwd = 3, col = "cyan", main = "Attrition vs. Benefits", xlab = "benefits($)", ylab = "attrition(%)")
-lines(benefits,attrition, col = "blue")
-```
+![plot of chunk unnamed-chunk-1](BenefitsSimulation-figure/unnamed-chunk-1.png) 
 
 
 The Tool in Action
